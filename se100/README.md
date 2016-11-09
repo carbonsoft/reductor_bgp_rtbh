@@ -12,8 +12,6 @@
 Создайте хук файрвола (см документацию, "свои правила файрвола") в котором будет разрешаться трафик для bgpd до нужного IP правилами:
 
     iptables -I INPUT -s $bgp_router_ip -j ACCEPT
-    iptables -t mangle -I PREROUTING -s $bgp_router_ip -j ACCEPT
-    iptables -t mangle -I PREROUTING -d $bgp_router_ip -j ACCEPT
     
 и выполните
 
