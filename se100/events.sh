@@ -9,7 +9,7 @@ ip_block_full_add() {
 	local ip="$1"
 	read SEQ < $TMPDIR/blockseq
 	SEQ=${SEQ:-0}
-	let SEQ+=5
+	let SEQ+=1
 	echo $SEQ > $TMPDIR/blockseq
 	echo $SEQ
 	{
