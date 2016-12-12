@@ -12,6 +12,6 @@ BGP RTBH schemes.
 
 Частично за основу хука events.sh взят [скрипт от nuclearcat с forums.nag.ru]( http://forum.nag.ru/forum/index.php?s=35a6922ec0c360008db4ceff8155bd3e&showtopic=71422&st=0&p=662483&#entry662483).
 
-## TODO
+## Другие способы интеграции
 
-- Mikrotik
+- [Mikrotik](http://docs.carbonsoft.ru/pages/viewpage.action?pageId=67108904) (отправка команд, не BGP).
