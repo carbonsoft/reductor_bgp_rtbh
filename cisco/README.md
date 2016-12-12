@@ -1,24 +1,15 @@
-Так/ что я сделал.
-
 Хук event.sh идентичен как и для mx80 (надо только поменять comminity на свое и IP для ebgp сессии)
-только мне не понравилось, то, что при каждом добавлении IP мы генерируем update пакет в сторону кошки.
-поэтому я закоментил строчки
 
-`clear ip bgp * soft`
 
-и сдалел просто скриптик на выполнении каждые 30 минут, который клинит сессию.
-
-теперь конфиг кошки.
-
-`interface Null0` - по умолчанию у меня вот так.
+`interface Null0`
 
 `no ip unreachables`
 
-`ip community-list standard black-hole permit 50XXX:666` - комьюнити блекхола для моей ASки
+`ip community-list standard black-hole permit 50XXX:666` - комьюнити блекхола для ASки
 
 `router bgp 50XXX`
 
-`neighbor XX.XX.XX.XX remote-as 65002` - для редуктора я взял приватную AS
+`neighbor XX.XX.XX.XX remote-as 65XXX` - для редуктора я взял приватную AS
 
 `neighbor XX.XX.XX.XX ebgp-multihop 3` - это нужно если редуктор и бордер находятся не директ коннект
 
@@ -28,7 +19,7 @@
 
 `route-map BLACK-HOLE permit 10`
 
-`match community black-hole` - все маршруты, которые приниты с коммюнитри блек-хола
+`match community black-hole` - все маршруты, которые приняты с коммюнитри блек-хола
 
 `set ip next-hop 172.16.0.1` - выставить next-hop на приватный IP.
 
