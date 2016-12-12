@@ -15,3 +15,4 @@ BGP RTBH schemes.
 ## Другие способы интеграции
 
 - [Mikrotik](http://docs.carbonsoft.ru/pages/viewpage.action?pageId=67108904) (отправка команд, не BGP).
+- [Carbon XGE Router 5/Carbon Billing Softrouter 5](http://docs.carbonsoft.ru/pages/viewpage.action?pageId=67108889)
